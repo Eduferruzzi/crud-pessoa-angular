@@ -8,6 +8,9 @@ import { EditarEndereco } from './endereco/editar-endereco/editar-endereco'
 import { ListarCidade } from './cidade/listar-cidade/listar-cidade'
 import { InserirCidade } from './cidade/inserir-cidade/inserir-cidade'
 import { EditarCidade } from './cidade/editar-cidade/editar-cidade'
+import { ListarEstado } from './estado/listar-estado/listar-estado'
+import { InserirEstado } from './estado/inserir-estado/inserir-estado'
+import { EditarEstado } from './estado/editar-estado/editar-estado'
 
 export const routes: Routes = [
     {
@@ -62,5 +65,21 @@ export const routes: Routes = [
     {
         path: 'cidades/editar/:id',
         component: EditarCidade
+    },
+    {
+        path: 'estados',
+        redirectTo: 'estados/listar'
+    },
+    {
+        path: 'estados/listar',
+        component: ListarEstado
+    },
+    {
+        path: 'estados/novo',
+        component: InserirEstado
+    },
+    {
+        path: 'estados/editar/:id',
+        component: EditarEstado
     }
 ];
