@@ -5,11 +5,14 @@ import { EditarPessoa } from './pessoa/editar-pessoa/editar-pessoa'
 import { ListarEndereco } from './endereco/listar-endereco/listar-endereco'
 import { InserirEndereco } from './endereco/inserir-endereco/inserir-endereco'
 import { EditarEndereco } from './endereco/editar-endereco/editar-endereco'
+import { ListarCidade } from './cidade/listar-cidade/listar-cidade'
+import { InserirCidade } from './cidade/inserir-cidade/inserir-cidade'
+import { EditarCidade } from './cidade/editar-cidade/editar-cidade'
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'enderecos/listar',
+        redirectTo: 'pessoas/listar',
         pathMatch: 'full'
     },
     {
@@ -43,5 +46,21 @@ export const routes: Routes = [
     {
         path: 'enderecos/editar/:id',
         component: EditarEndereco
+    },
+    {
+        path: 'cidades',
+        redirectTo: 'cidades/listar'
+    },
+    {
+        path: 'cidades/listar',
+        component: ListarCidade
+    },
+    {
+        path: 'cidades/novo',
+        component: InserirCidade
+    },
+    {
+        path: 'cidades/editar/:id',
+        component: EditarCidade
     }
 ];
