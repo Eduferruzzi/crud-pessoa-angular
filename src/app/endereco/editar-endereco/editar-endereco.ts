@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common'
 import { Component, inject, OnInit, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms'
 import { ActivatedRoute, Router, RouterModule } from '@angular/router'
-import { Endereco } from '../../models/endereco.model'
-import { EnderecoService } from '../../services/endereco-service'
+import { Endereco } from '../../shared/models/endereco.model'
+import { EnderecoService } from '../../shared/services/endereco-service'
 
 @Component({
   imports: [CommonModule, FormsModule, RouterModule],

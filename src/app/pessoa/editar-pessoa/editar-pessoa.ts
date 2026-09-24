@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common'
-import { Component, inject, OnInit, ViewChild } from '@angular/core';
+import { Component, inject, OnInit, ViewChild } from '@angular/core'
 import { FormsModule, NgForm } from '@angular/forms'
 import { ActivatedRoute, Router, RouterModule } from '@angular/router'
-import { Pessoa } from '../../models/pessoa.model'
-import { PessoaService } from '../../services/pessoa-service'
+import { Pessoa } from '../../shared/models/pessoa.model'
+import { PessoaService } from '../../shared/services/pessoa-service'
+import { Numerico } from '../../shared/directives/numerico'
 
 @Component({
-  imports: [ CommonModule, FormsModule, RouterModule],
+  imports: [ CommonModule, FormsModule, RouterModule, Numerico],
   selector: 'app-editar-pessoa',
   styleUrl: './editar-pessoa.css',
   templateUrl: './editar-pessoa.html',

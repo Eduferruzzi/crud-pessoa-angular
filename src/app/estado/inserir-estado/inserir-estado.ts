@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common'
 import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from "@angular/forms";
 import { Router, RouterModule } from '@angular/router'
-import { Estado } from '../../models/estado.model'
-import { EstadoService } from '../../services/estado-service'
+import { Estado } from '../../shared/models/estado.model'
+import { EstadoService } from '../../shared/services/estado-service'
 
 @Component({
   imports: [CommonModule, FormsModule, RouterModule],

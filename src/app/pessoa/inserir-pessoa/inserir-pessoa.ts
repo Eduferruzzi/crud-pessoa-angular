@@ -1,12 +1,13 @@
 import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms'
-import { Pessoa } from '../../models/pessoa.model'
+import { Pessoa } from '../../shared/models/pessoa.model'
 import { Router, RouterModule } from '@angular/router'
-import { PessoaService } from '../../services/pessoa-service'
+import { PessoaService } from '../../shared/services/pessoa-service'
 import { CommonModule } from '@angular/common'
+import { Numerico } from '../../shared/directives/numerico'
 
 @Component({
-  imports: [ CommonModule, FormsModule, RouterModule ],
+  imports: [ CommonModule, FormsModule, RouterModule, Numerico ],
   selector: 'app-inserir-pessoa',
   styleUrl: './inserir-pessoa.css',
   templateUrl: './inserir-pessoa.html',

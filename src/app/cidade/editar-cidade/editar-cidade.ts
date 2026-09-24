@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common'
 import { Component, inject, OnInit, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms'
 import { ActivatedRoute, Router, RouterModule } from '@angular/router'
-import { Cidade } from '../../models/cidade.model'
-import { CidadeService } from '../../services/cidade-service'
+import { Cidade } from '../../shared/models/cidade.model'
+import { CidadeService } from '../../shared/services/cidade-service'
 
 @Component({
   imports: [CommonModule, FormsModule, RouterModule],

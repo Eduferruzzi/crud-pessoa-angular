@@ -25,6 +25,7 @@
             <input type="text" class="form-control" id="idade" name="idade" 
              [(ngModel)]="pessoa.idade"
              #idade="ngModel"
+             numerico
              required>
             @if(idade.errors && (idade.dirty || idade.touched)){
                 <div class="alert alert-danger">

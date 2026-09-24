@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { PessoaService } from '../../services/pessoa-service'
-import { Pessoa } from '../../models/pessoa.model'
+import { PessoaService } from '../../shared/services/pessoa-service'
+import { Pessoa } from '../../shared/models/pessoa.model'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 

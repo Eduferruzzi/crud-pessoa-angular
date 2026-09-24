@@ -1,7 +1,7 @@
 import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms'
-import { Cidade } from '../../models/cidade.model'
-import { CidadeService } from '../../services/cidade-service'
+import { Cidade } from '../../shared/models/cidade.model'
+import { CidadeService } from '../../shared/services/cidade-service'
 import { Router, RouterModule } from '@angular/router'
 import { CommonModule } from '@angular/common'
 
