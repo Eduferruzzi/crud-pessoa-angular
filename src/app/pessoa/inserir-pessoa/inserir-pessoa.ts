@@ -1,13 +1,15 @@
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core'
 import { FormsModule, NgForm } from '@angular/forms'
 import { Pessoa } from '../../shared/models/pessoa.model'
 import { Router, RouterModule } from '@angular/router'
 import { PessoaService } from '../../shared/services/pessoa-service'
 import { CommonModule } from '@angular/common'
 import { Numerico } from '../../shared/directives/numerico'
+import { MinimoValidator } from '../../shared/directives/minimo-validator'
+import { NgxMaskDirective } from 'ngx-mask'
 
 @Component({
-  imports: [ CommonModule, FormsModule, RouterModule, Numerico ],
+  imports: [CommonModule, FormsModule, RouterModule, Numerico, MinimoValidator, NgxMaskDirective],
   selector: 'app-inserir-pessoa',
   styleUrl: './inserir-pessoa.css',
   templateUrl: './inserir-pessoa.html',

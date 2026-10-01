@@ -5,9 +5,11 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router'
 import { Pessoa } from '../../shared/models/pessoa.model'
 import { PessoaService } from '../../shared/services/pessoa-service'
 import { Numerico } from '../../shared/directives/numerico'
+import { MinimoValidator } from '../../shared/directives/minimo-validator';
+import { NgxMaskDirective } from 'ngx-mask'
 
 @Component({
-  imports: [ CommonModule, FormsModule, RouterModule, Numerico],
+  imports: [CommonModule, FormsModule, RouterModule, Numerico, MinimoValidator, NgxMaskDirective],
   selector: 'app-editar-pessoa',
   styleUrl: './editar-pessoa.css',
   templateUrl: './editar-pessoa.html',

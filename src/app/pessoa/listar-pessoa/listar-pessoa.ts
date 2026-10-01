@@ -3,9 +3,11 @@ import { PessoaService } from '../../shared/services/pessoa-service'
 import { Pessoa } from '../../shared/models/pessoa.model'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
+import { NgxMaskPipe } from 'ngx-mask'
+import { CaixaAltaPipe } from '../../shared/pipes/caixa-alta.pipe'
 
 @Component({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, NgxMaskPipe, CaixaAltaPipe],
   selector: 'app-listar-pessoa',
   styleUrl: './listar-pessoa.css',
   templateUrl: './listar-pessoa.html',
