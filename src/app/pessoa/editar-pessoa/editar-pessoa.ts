@@ -2,10 +2,7 @@ import { CommonModule } from '@angular/common'
 import { Component, inject, OnInit, ViewChild } from '@angular/core'
 import { FormsModule, NgForm } from '@angular/forms'
 import { ActivatedRoute, Router, RouterModule } from '@angular/router'
-import { Pessoa } from '../../shared/models/pessoa.model'
-import { PessoaService } from '../../shared/services/pessoa-service'
-import { Numerico } from '../../shared/directives/numerico'
-import { MinimoValidator } from '../../shared/directives/minimo-validator';
+import { MinimoValidator, Numerico, Pessoa, PessoaService } from '../../shared';
 import { NgxMaskDirective } from 'ngx-mask'
 
 @Component({

@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router'
-import { EnderecoService } from '../../shared/services/endereco-service'
-import { Endereco } from '../../shared/models/endereco.model'
+import { EnderecoService, Endereco } from '../../shared'
 
 @Component({
   imports: [CommonModule, RouterModule],

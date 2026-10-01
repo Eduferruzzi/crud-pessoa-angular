@@ -1,11 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { PessoaService } from '../../shared/services/pessoa-service'
-import { Pessoa } from '../../shared/models/pessoa.model'
+import { PessoaService, Pessoa, CaixaAltaPipe } from '../../shared'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 import { NgxMaskPipe } from 'ngx-mask'
-import { CaixaAltaPipe } from '../../shared/pipes/caixa-alta.pipe'
-
 @Component({
   imports: [CommonModule, RouterModule, NgxMaskPipe, CaixaAltaPipe],
   selector: 'app-listar-pessoa',

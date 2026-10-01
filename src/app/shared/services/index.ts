@@ -1,0 +1,4 @@
+export * from './cidade-service'
+export * from './endereco-service'
+export * from './pessoa-service'
+export * from './estado-service'

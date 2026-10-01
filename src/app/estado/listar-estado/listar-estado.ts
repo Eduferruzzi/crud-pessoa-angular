@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router'
-import { EstadoService } from '../../shared/services/estado-service'
-import { Estado } from '../../shared/models/estado.model'
+import { EstadoService, Estado } from '../../shared'
 
 @Component({
   imports: [CommonModule, RouterModule],

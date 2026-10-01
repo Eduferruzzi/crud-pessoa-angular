@@ -1,8 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { CidadeService } from '../../shared/services/cidade-service'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
-import { Cidade } from '../../shared/models/cidade.model'
+import { CidadeService, Cidade } from '../../shared'
 
 @Component({
   imports: [CommonModule, RouterModule],
