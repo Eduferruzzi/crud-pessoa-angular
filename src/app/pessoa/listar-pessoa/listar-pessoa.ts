@@ -3,6 +3,8 @@ import { PessoaService, Pessoa, CaixaAltaPipe } from '../../shared'
 import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 import { NgxMaskPipe } from 'ngx-mask'
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
+import { ModalPessoa } from '../modal-pessoa/modal-pessoa'
 @Component({
   imports: [CommonModule, RouterModule, NgxMaskPipe, CaixaAltaPipe],
   selector: 'app-listar-pessoa',
@@ -11,6 +13,7 @@ import { NgxMaskPipe } from 'ngx-mask'
 })
 export class ListarPessoa implements OnInit {
   private pessoaService = inject(PessoaService)
+  private modalService = inject(NgbModal)
   pessoas: Pessoa[] = []
 
   ngOnInit(): void {
@@ -23,5 +26,10 @@ export class ListarPessoa implements OnInit {
       this.pessoaService.remover(pessoa.id!)
       this.pessoas = this.pessoaService.listarTodos()
     }
+  }
+
+  abrirModalPessoa(pessoa: Pessoa){
+    const modalRef = this.modalService.open(ModalPessoa)
+    modalRef.componentInstance.pessoa = pessoa
   }
 }
