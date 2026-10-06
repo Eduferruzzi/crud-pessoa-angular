@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common'
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router'
 import { EnderecoService, Endereco } from '../../shared'
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
+import { ModalEndereco } from '../modal-endereco/modal-endereco'
 
 @Component({
   imports: [CommonModule, RouterModule],
@@ -11,6 +13,7 @@ import { EnderecoService, Endereco } from '../../shared'
 })
 export class ListarEndereco implements OnInit {
   private enderecoService = inject(EnderecoService)
+  private modalService = inject(NgbModal)
   enderecos: Endereco[] = []
 
   ngOnInit(): void {
@@ -23,5 +26,10 @@ export class ListarEndereco implements OnInit {
       this.enderecoService.remover(endereco.id)
       this.enderecos = this.enderecoService.listarTodos()
     }
+  }
+
+  abrirModalEndereco(endereco: Endereco){
+    const modalRef = this.modalService.open(ModalEndereco)
+    modalRef.componentInstance.endereco = endereco
   }
 }
