@@ -14,7 +14,7 @@
         @for (cidade of cidades; track cidade.id){
             <tr>
                 <td>{{ cidade.nome }}</td>
-                <td>{{ cidade.estado }}</td>
+                <td>{{ cidade.estado.sigla }}</td>
                 <td class="text-center" style="width: 300px">
                     <button type="button" class="btn btn-xs btn-info"
                             (click)="abrirModalCidade(cidade)">
