@@ -1,11 +1,22 @@
-import { Service } from '@angular/core';
+import { inject, Service } from '@angular/core';
 import { LoginModel, Usuario } from '../models'
-import { Observable, of } from 'rxjs'
+import { map, Observable, of } from 'rxjs'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 
 const LS_CHAVE:string = "usuarioLogado"
 
 @Service()
 export class LoginService {
+    private httpClient = inject(HttpClient)
+
+    BASE_URL = "http://localhost:5000/usuarios"
+
+    httpOptions = {
+        headers: new HttpHeaders({
+            'Content-Type': 'application/json'
+        })
+    }
+
     public get usuarioLogado(): Usuario | null {
         let usu = localStorage[LS_CHAVE]
         return (usu ? JSON.parse(localStorage[LS_CHAVE]) : null)
@@ -19,17 +30,14 @@ export class LoginService {
     }
 
     login(login: LoginModel): Observable<Usuario|null>{
-        let usu = new Usuario(1, login.login, login.login, login.senha, "FUNC")
-
-        if(login.login == login.senha){
-            if(login.login == "admin") {
-                usu.perfil = "ADMIN"
-            } else if (login.login == "gerente") {
-                usu.perfil = "GERENTE"
-            }
-            return of(usu)
-        } else {
-            return of(null)
-        }
+        return this.httpClient.get<Usuario[]>(this.BASE_URL, this.httpOptions)
+                .pipe( map( lista => {
+                    let usu = lista.find(u => u.login===login.login &&
+                                              u.senha===login.senha)
+                    if (usu != undefined)
+                        return usu
+                    else 
+                        return null
+                }))
     }
 }

@@ -1,0 +1,33 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "login": "admin",
+      "senha": "admin",
+      "perfil": "ADMIN"
+    },
+    {
+      "id": "2",
+      "nome": "Gerente2",
+      "login": "gerente2",
+      "senha": "123",
+      "perfil": "GERENTE"
+    },
+    {
+      "id": "3",
+      "nome": "Func",
+      "login": "func",
+      "senha": "func",
+      "perfil": "FUNC"
+    },
+    {
+      "id": "M1Brd7P8Ltk",
+      "nome": "Eduardo",
+      "login": "dudunildo",
+      "senha": "8888",
+      "perfil": "ADMIN"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
